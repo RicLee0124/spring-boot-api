@@ -1,0 +1,36 @@
+server:
+  port: 8080
+#  context-path: /api
+# logback日志级别trace<debug<info<warn<error
+logging:
+  config: classpath:logback-spring.xml
+#  level:
+#    root: debug
+#    org.sprignframework.web: warn
+#    com.lrm: debug
+  # 默认文件大小是10M，超过10M就会切分
+#  file: logs/debug.log  # 相对路径
+#  file: C:\logs  #绝对路径
+#  path: logs #path和log不能同时使用，如果同时使用，则只有file会生效
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/book?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+
+
+
+
+
+
+
+
+
